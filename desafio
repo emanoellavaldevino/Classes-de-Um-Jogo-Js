@@ -1,0 +1,50 @@
+class Heroina {
+
+    ataque = "";
+
+    constructor(nome, idade, tipo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.tipo = tipo;
+    }
+
+    atacar() {
+
+        if (this.tipo === "JeanGrey") {
+            this.ataque = "Telepatia";
+
+        } else if (this.tipo === "Sakura") {
+            this.ataque = "super força";
+
+        } else if (this.tipo === "SakuraCard") {
+            this.ataque = "Cartas Mágicas";
+
+        } else if (this.tipo === "SailorMoon") {
+            this.ataque = "Moon ataque";
+            
+        } else {
+            this.tipo = `- ${this.tipo} - é um TIPO INVÁLIDO`;
+            this.ataque = "ATAQUE INVÁLIDO";
+        }
+
+       
+        console.log(`A ${this.tipo} atacou usando ${this.ataque}`)
+    }
+
+}
+
+do {
+
+    let nome = string(input.question("Informe do heroina: "))
+    let idade = input.questionInt('Informe a idade do heroina: ')
+    let tipo = input.question('Informe o tipo de heroina [JeanGrey, Sakura, SakuraCard ou SailorMoon]: ')
+
+    let heroina = new Heroina(nome, idade, tipo.toLowerCase())
+    heroina.atacar()
+
+    let sair = input.question('Deseja criar uma nova heroina? [Sim/Não] ')
+
+    if(sair.toLowerCase() === 'n')
+        break;
+
+} while(true)
