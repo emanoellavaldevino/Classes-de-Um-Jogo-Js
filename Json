@@ -1,0 +1,25 @@
+let invoice = {
+     name: "JeanGrey", 
+     age: 35,
+     type: {
+     	type0: ["SakuraCards", "Cartas Mágicas"],
+        type1: ["Nani", "Batedora de Carteiras"],
+        type2: ["Sakura", "Super força"],
+        type3: ["Sailormoon",  "Manipulação da alma"]
+
+    }
+ }
+generateInvoice(invoice) 
+ 
+function generateInvoice(invoice){
+    console.log(`A Heroina ${invoice.name}`)
+    console.log(`A sua idade é ${invoice.age}`)
+    console.log("----------")
+	
+    for(let index in invoice.type){
+		let [typeName, typePower] = invoice.type[index]
+        console.log(`A ${typeName} juntou-se com a sua amiga ${invoice.name} e usou o de poder ${typePower}`) 
+        
+        }
+     	
+}
